@@ -16,8 +16,7 @@ repositories {
 // Dependencies
 dependencies {
     // Compile
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    compile project('json-display')
     // Test
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

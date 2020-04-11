@@ -1,2 +1,6 @@
+// Root module
 rootProject.name = 'java-project'
+
+// Child modules
+include 'json-display'
 
