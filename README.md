@@ -43,3 +43,12 @@ It will be executed before any build.gradle script and even before the Project i
     ```
     gradle wrapper --gradle-version 3.5 
     ```
+### Gradle Tasks
+* They are functions performed by Gradle
+* Consist of one or more actions
+* What you can tell Gradle to do
+
+To see which are the Gradle task availables run the following command in the terminal:
+``` 
+gradle tasks
+```
