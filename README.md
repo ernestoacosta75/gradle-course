@@ -52,3 +52,9 @@ To see which are the Gradle task availables run the following command in the ter
 ``` 
 gradle tasks
 ```
+
+### Gradle Vew Tool
+* What is the Gradle Vew Tool?
+  * Is an alternate way of running Gradle tasks
+  * Has its own GUI
+  * Is useful when you are first learning Gradle
