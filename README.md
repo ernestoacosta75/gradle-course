@@ -58,3 +58,40 @@ gradle tasks
   * Is an alternate way of running Gradle tasks
   * Has its own GUI
   * Is useful when you are first learning Gradle
+  
+### Create new Gradle Tasks
+* Creating simple tasks using Groovy
+  * In the **build.gradle** file:
+    ``` 
+    task showDate {
+        doLast{
+           println "Current Date: " + new Date() 
+        }
+    }
+    ```
+  * To run the task open the terminal and:
+    ``` 
+    gradle showDate
+    ```  
+* Assigning task dependencies
+  * Let's say that the **showDate** task depends on other tasks. In that case, we us **dependsOn**:
+    ``` 
+    task showDate {
+        dependsOn build
+        doLast{
+           println "Current Date: " + new Date() 
+        }
+    }
+    ```  
+    * We can assign a **group** and a **description** to our custom task:
+        ``` 
+        task showDate {
+            dependsOn build
+            group = 'my tasks'
+            description = 'Show current date'
+            doLast{
+               println "Current Date: " + new Date() 
+            }
+        }
+        ```    
+* Integrating with the Terminal tool and Gradle View
