@@ -3,6 +3,7 @@ plugins {
     id 'java'
 }
 
+// Artifact information fo the build of the root project
 group 'info.garagesalesapp'
 version '1.0-SNAPSHOT'
 
@@ -13,7 +14,7 @@ repositories {
     mavenCentral()
 }
 
-// Dependencies
+// External dependencies
 dependencies {
     // Compile
     compile project('json-display')
