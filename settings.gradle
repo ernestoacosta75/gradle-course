@@ -3,4 +3,5 @@ rootProject.name = 'java-project'
 
 // Child modules
 include 'json-display'
+include 'show-date'
 
