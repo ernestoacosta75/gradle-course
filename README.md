@@ -95,3 +95,28 @@ gradle tasks
         }
         ```    
 * Integrating with the Terminal tool and Gradle View
+
+### Extend Gradle Tasks
+* Extending DefaultTask
+  * To implement a custom task class, you extend ***DefaultTask***.
+  ##### Ej.:
+  ``` 
+  class ShowDate extends DefaultTask {
+      String dateMessage = "Date is: "
+  
+      @TaskAction
+      void showDate() {
+          println dateMessage + new Date()
+      }
+  }
+  
+  // Tasks
+  task showDate(type: ShowDate)
+  ```
+* Javadoc for DefaultTask
+* Extending you own custom tasks
+  ``` 
+  task custommShowDate(type: ShowDate) {
+      dateMessage = "Custom time is: "
+  }
+  ```

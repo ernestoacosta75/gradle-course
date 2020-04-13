@@ -24,12 +24,19 @@ dependencies {
 
 apply plugin: 'project-report'
 
-// Tasks
-task showDate {
-    dependsOn build
-    group = 'my tasks'
-    description = 'Show current date'
-    doLast {
-        println "Current Date: " + new Date()
+// Classes
+class ShowDate extends DefaultTask {
+    String dateMessage = "Date is: "
+
+    @TaskAction
+    void showDate() {
+        println dateMessage + new Date()
     }
+}
+
+// Tasks
+task showDate(type: ShowDate)
+
+task custommShowDate(type: ShowDate) {
+    dateMessage = "Custom time is: " + new Date().format("HH:mm:ss") + "\n"
 }
