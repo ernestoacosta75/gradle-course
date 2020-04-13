@@ -154,3 +154,13 @@ apply plugin: GreetingPlugin
   Without a **buildScript** block, you can use everything that ships with Gradle out-of-the-box. If you additionally want to use third-party plugins, 
   task classes, or other classes (in the build script!), you have to specify the corresponding dependencies in the buildScript closure.
   The **buildScript** closure is for the **build.gradle** file itself.
+  
+### Profiling a Gradle Build
+* What i a Gradle profile?
+  * Report on the build highlighting performance
+  * Can be created any time you run a task
+  * Can be saved permanently to record a history of the build performance
+
+  ``` 
+  gradle build --profile
+  ```
